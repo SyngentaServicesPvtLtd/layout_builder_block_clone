@@ -3,13 +3,14 @@
 namespace Drupal\layout_builder_block_clone\Element;
 
 use Drupal\Core\Render\Element;
+use Drupal\Core\Security\TrustedCallbackInterface;
 
 /**
  * Class CloneLayoutBuilderBlock
  *
  * @package Drupal\layout_builder_block_clone\Element
  */
-class CloneLayoutBuilderBlock {
+class CloneLayoutBuilderBlock implements TrustedCallbackInterface {
 
   /**
    * Add 'Clone' to metadata contextual link.
@@ -36,6 +37,13 @@ class CloneLayoutBuilderBlock {
     }
 
     return $element;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function trustedCallbacks() {
+    return ['preRenderLayoutBuilder'];
   }
 
 }
