@@ -19,8 +19,9 @@ Module has integration with [Entity Clone](https://www.drupal.org/project/entity
 is enabled Layout Block Clone will use entity_clone cloneEntity() functionality, if not single core entity->createDuplicate()
 will be used to clone Block Content eck.
 
-Cloned Block Content is automatically set to reusable, new Custom Block Content is added to /admin/structure/block/block-content
-and can be re-used in layouts under 'Custom' section on 'Add Block'.
+Cloned Block Content can be set to reusable (if so new Custom Block Content is added to /admin/structure/block/block-content
+and can be re-used in layouts under 'Custom' section on 'Add Block'). There is an option to clone any additional config set-ups
+from other helper modules or custom code.
 
 REQUIREMENTS
 ------------
